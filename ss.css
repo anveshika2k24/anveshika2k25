@@ -1,0 +1,259 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= HEADER ================= */
+.header {
+    position: relative;
+    padding: 20px 16px 16px;
+    text-align: center;
+}
+
+/* ================= LOGO ================= */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #a9790a;
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px #a9790a,
+        0 0 20px #a9790a;
+}
+
+/* ================= TITLE ================= */
+.title h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    color: #d4af37;
+    letter-spacing: 3px;
+}
+
+.title .line {
+    width: 160px;
+    height: 3px;
+    background: #d4af37;
+    margin: 8px auto;
+}
+
+.title p {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: #d4af37;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* ================= NAV ================= */
+.nav {
+    margin-top: 16px;
+}
+
+.nav .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 8px 12px;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.nav .row::-webkit-scrollbar {
+    display: none;
+}
+
+.nav a {
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    transition: 
+        transform 0.25s ease,
+        color 0.25s ease;
+    will-change: transform;
+}
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;              /* FIXED */
+    width: 0;
+    height: 2px;
+    background-color: #d4af37;
+    transform: translateX(-50%);
+    transition: width 0.35s ease;
+}
+
+/* Hover animation */
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Active page underline */
+.nav a.active::after {
+    width: 100%;
+}
+
+.nav a.active {
+    color: #d4af37;   /* gold text when active */
+}
+
+
+
+
+/* Hover */
+.nav a:hover {
+    color: #d4af37;
+    transform: scale(1.08) translateY(-3px);
+    color: #d4af37; /* gold on hover */
+
+}
+
+/* ================= DIVIDER ================= */
+.bottom-line {
+    margin-top: 20px;
+    height: 3px;
+    background: #d4af37;
+    width: 100%;
+}
+
+/* ================= SOCIAL ================= */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.social-media a {
+    color: #d4af37;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #fff;
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 769px) {
+
+    .header {
+        padding: 40px 20px 20px;
+    }
+
+    /* Logo left */
+    .logo {
+        position: absolute;
+        left: 30px;
+        top: 25px;
+        margin: 0;
+    }
+
+    /* Social right */
+    .social-media {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        margin: 0;
+    }
+
+    /* Title size */
+    .title h2 {
+        font-size: 48px;
+    }
+
+    .title .line {
+        width: 220px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    /* Nav centered, no scroll */
+    .nav .row {
+        justify-content: center;
+        overflow-x: visible;
+        flex-wrap: wrap;
+    }
+}
+/* ================= BURGER ================= */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    z-index: 1200;
+}
+
+.burger span {
+    width: 26px;
+    height: 3px;
+    background: #d4af37;
+    border-radius: 2px;
+}
+
+/* ================= MOBILE BURGER NAV ================= */
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav .row {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: block !important;
+    }
+}
+

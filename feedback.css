@@ -1,0 +1,87 @@
+/* FEEDBACK PAGE */
+.feedback-page {
+    min-height: 100vh;
+    background: black;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Title */
+.feedback-page h1 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.feedback-page p {
+    color: #ccc;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form */
+.feedback-form {
+    max-width: 480px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #0a0a0a;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    padding: 12px;
+    background: black;
+    border: 1px solid #d4af37;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.feedback-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Button */
+.feedback-form button {
+    background: #d4af37;
+    color: black;
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.feedback-form button:hover {
+    background: white;
+}
+.select-label {
+    color: #d4af37;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+select {
+    padding: 12px;
+    background: black;
+    border: 1px solid #d4af37;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Dropdown options */
+select option {
+    background: black;
+    color: white;
+}
+

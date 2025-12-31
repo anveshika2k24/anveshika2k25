@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anveshika</title>
+    <link rel="stylesheet" href="ss.css">
+
+    <!-- Google Font (Elegant look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link  rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="slid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="feedback.css">
+
+
+</head>
+<body>
+
+<header class="header">
+    <!--Logo-->
+    <div class="logo"><img src="logo/logo.jpg" alt="Anveshika Logo">
+    </div>
+
+
+    <!-- Title -->
+    <div class="title">
+        <h2>ANVESHIKA</h2>
+        <div class="line"></div>
+        <p>~ BEYOND THE BOUNDARIES</p>
+    </div>
+
+    <!--Social Media-->
+    <div class="social-media">
+      <a href="about.html">About</a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/_seshu_02?igsh=MTE0Y2R2Nzg5bHpraQ=="><i class="fab fa-instagram"></i></a>
+    </div>
+    <!-- Burger Menu (Mobile) -->
+    <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+   <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-menu" id="navMenu">
+        <div class="row">
+            <a class="" href="index.html">Home</a>
+            <a href="inter.html">International</a>
+            <a href="nati.html">National</a>
+            <a href="stateaffairs.html">State Affairs</a>
+            <a href="infra.html">Infra</a>
+            <a href="scie&te.html">Science&Tech</a>
+            <a href="cul.html">Culture</a>
+            <a href="spo.html">Sports</a>
+            <a href="ins.html">Inspiring Stories</a>
+            <a href="trib.html">Tributes</a>
+            <a href="mile.html">Milestones</a>
+            <a href="high.html">Highlights</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+     </div>
+    </nav>
+    <!-- Bottom gold line -->
+    <div class="bottom-line"></div>
+
+</header>
+
+<section class="feedback-page">
+    <h1>Feedback Form</h1>
+    <p>Your voice helps us improve</p>
+
+    <form 
+        class="feedback-form" 
+        action="https://formspree.io/f/mdaowqpa" 
+        method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+       
+
+        <select name="Role" id="Role" required>
+        <option value="" disabled selected>-- Select your role --</option>
+        <option value="Student">Student</option>
+        <option value="Parent">Parent</option>
+        <option value="Lecturer">Lecturer</option>
+        </select>
+
+        <textarea name="message" placeholder="Write your feedback..." required></textarea>
+
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+
+
+</body>
+</html>
+
