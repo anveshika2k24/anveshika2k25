@@ -1,0 +1,106 @@
+/* ================= MAGAZINE HERO ================= */
+.mag-hero {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+/* Card base */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Dark overlay */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.15)
+    );
+}
+
+/* Content */
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.tag {
+    background: #d4af37;
+    color: black;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.big-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.small-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.date {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+/* Hover effect */
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* Right column */
+.side-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Height control */
+.big-card {
+    height: 420px;
+}
+
+.small-card {
+    height: 198px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    .mag-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .big-card,
+    .small-card {
+        height: 260px;
+    }
+}
